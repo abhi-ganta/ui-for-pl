@@ -93,7 +93,7 @@ Take the following simple machine learning example:
 
   X_tr, X_te, y_tr, y_te = train_test_split(X, y, 0.2)
   model = RandomForestClassifier()
-  ?
+  model.fit(X_tr, y_tr)
   model.score(X_te, y_te)
 
 Given the hole in the code, this code completion tool can accurately fill in `model.fit(X_tr, y_tr)` for the question mark. The team is able to do this by treating the code completion problem as a natural language processing problem of predicting probabilities of sentences. Static analysis of method call sequences and a statistical language model are used to generate a list of ranked sentences based on likelihoods.
